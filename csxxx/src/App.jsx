@@ -15,10 +15,14 @@ function App() {
     <div className="app_container">
       <div className="header green--flashing">
         <img className="header__gt-icon" src={logo}/>
-        <div className="header__heading--animated">
-          <span>·</span>
-          <span>GO TRANSIT</span>
-          <span>·</span>
+        <div className="header__heading__scroll-container">
+            <div className="header__heading--animated">GO TRANSIT</div>
+
+            <div className="header__heading--animated2">·</div>
+
+            <div className="header__heading--animated3">GO TRANSIT</div>
+
+            <div className="header__heading--animated4">·</div>
         </div>
         <div className="header__itinerary">
           <span>{from}</span> to <span>{destination}</span>
