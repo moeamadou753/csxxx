@@ -5,19 +5,22 @@ import { useState } from 'react';
 const ticketNumber = "MZ56120152"
 const from = "Union Station Bus Terminal"
 const destination = "University of Waterloo Terminal"
-// when does this update?
-const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
 
 function App() {
+  // when does this update?
+  const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
+
   return (
     <div className="app_container green--flashing">
-
       <div className="header">
         <img className="header__gt-icon" />
         <div className="header__heading--animated">
           <span>·</span>
           <span>GO TRANSIT</span>
           <span>·</span>
+        </div>
+        <div className="header__itinerary">
+          <span>{from}</span> to <span>{destination}</span>
         </div>
       </div>
 
