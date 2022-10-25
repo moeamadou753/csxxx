@@ -1,39 +1,94 @@
-.App {
-  text-align: center;
+.app_container {
+
 }
 
-/* don't forget breakpoints bb */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.green--flashing {
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* region header */
+.header {
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header__gt-icon {
+
 }
 
-.App-link {
-  color: #61dafb;
+.header__heading--animated {
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header__itinerary {
+
 }
+/* end region header */
+
+
+/* region body */
+.body {
+
+}
+
+.body__trip-info {
+
+}
+
+.body__trip-info__vertical-divider {
+
+}
+
+.body__horizontal-divider {
+
+}
+
+.body__ticket-number {
+
+}
+
+.body__countdown-container {
+
+}
+
+.body__countdown-container__current-time {
+
+}
+
+.body__countdown-container__current-time__heading {
+  
+}
+
+.body__countdown-container__current-time__clock {
+  
+}
+
+.body__countdown-container__time-since-activation {
+
+}
+
+.body__countdown-container__time-since-activation__heading {
+
+}
+
+.body__countdown-container__time-since-activation__clock {
+
+}
+/* end region body */
+
+
+/* region footer */
+.footer {
+
+}
+
+.footer__disclaimer {
+
+}
+
+.footer__hourglass {
+
+}
+/* end region footer */
+
+
+
