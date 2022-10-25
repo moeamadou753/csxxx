@@ -1,0 +1,67 @@
+import * as dayjs from 'dayjs';
+import './App.css';
+import { useState } from 'react';
+
+const ticketNumber = "MZ56120152"
+const from = "Union Station Bus Terminal"
+const destination = "University of Waterloo Terminal"
+// when does this update?
+const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
+
+function App() {
+  return (
+    <div className="app_container green--flashing">
+
+      <div className="header">
+        <img className="header__gt-icon" />
+        <div className="header__heading--animated">
+          <span>·</span>
+          <span>GO TRANSIT</span>
+          <span>·</span>
+        </div>
+      </div>
+
+      <div className="body">
+        <div className="body__trip-info">
+          <div className="body__trip-info__vertical-divider" />
+        </div>
+
+        <div className="body__horizontal-divider" />
+
+        <span className="body__ticket-number">Ticket Number: <b>{ticketNumber}</b></span>
+        {/* structure barcode as a box of text which just has a background that is conveniently cut-out to fit the text*/}
+        <div className="body__barcode--animated">VALID FOR TRAVEL</div>
+        <div className="body__countdown-container">
+          <div className="body__countdown-container__current-time">
+            <span className="body__countdown-container__current-time__heading">CURRENT TIME:</span>
+            <span className="body__countdown-container__current-time__clock">{currentTime}</span>
+          </div>
+
+          <div className="body__countdown-container__time-since-activation">
+            <span className="body__countdown-container__time-since-activation__heading">TIME SINCE ACTIVATION:</span>
+            <span className="body__countdown-container__time-since-activation__clock">{hourglass() /* this is static fyi */}</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="footer" className="footer green--flashing">
+        <span className="footer__disclaimer">Please show this to the proper authority on board the train.</span>
+        <span className="footer__hourglass">{hourglass() /* this is static fyi */}</span>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Hourglass should count down in HH:MM:SS fmt from 04:00:0 to 00:00:00.
+ * 
+ * The footer will display the hourglass value, and the time since activation
+ * flag on the counter will use the inverse of the hourglass value 
+ * (i.e. hourglass() = 3:59:26 => tsa = 00:00:33)
+ */
+function hourglass() {
+
+}
+
+export default App;
