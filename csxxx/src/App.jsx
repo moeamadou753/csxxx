@@ -1,5 +1,5 @@
 import * as dayjs from 'dayjs';
-import './App.css';
+import './App.scss';
 import { useState } from 'react';
 
 const ticketNumber = "MZ56120152"
@@ -11,8 +11,8 @@ function App() {
   const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
 
   return (
-    <div className="app_container green--flashing">
-      <div className="header">
+    <div className="app_container">
+      <div className="header green--flashing">
         <img className="header__gt-icon" />
         <div className="header__heading--animated">
           <span>·</span>
