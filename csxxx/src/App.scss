@@ -28,16 +28,18 @@ $secondary-green: #1E3712;
 .header {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 20%;
   width: 100%;
 }
 
 .header__gt-icon {
-
+  height: 6vh;
+  margin: 12px;
 }
 
 .header__heading--animated {
-
+  
 }
 
 .header__itinerary {

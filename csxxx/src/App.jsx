@@ -1,5 +1,6 @@
 import * as dayjs from 'dayjs';
 import './App.scss';
+import logo from './transit-logo.png';
 import { useState } from 'react';
 
 const ticketNumber = "MZ56120152"
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="app_container">
       <div className="header green--flashing">
-        <img className="header__gt-icon" />
+        <img className="header__gt-icon" src={logo}/>
         <div className="header__heading--animated">
           <span>·</span>
           <span>GO TRANSIT</span>
