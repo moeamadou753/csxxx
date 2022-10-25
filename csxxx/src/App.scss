@@ -8,19 +8,20 @@ $secondary-green: #1E3712;
   flex-direction: column;
 }
 
-@keyframes flashing {
-    from {
-      background-color: $secondary-green;
-    }
-    to {
-      background-color: $primary-green;
-    }
+.green--flashing {
+  animation: flashing infinite 2s linear;
 }
 
-.green--flashing {
-  animation-name: flashing;
-  animation-duration: 1s;
-  animation: infinite;
+@keyframes flashing {
+  0% {
+    background-color: $secondary-green;
+  }
+  50% {
+    background-color: $primary-green;
+  }
+  100% {
+    background-color: $secondary-green;
+  }
 }
 
 /* region header */
