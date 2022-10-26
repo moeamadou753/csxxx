@@ -4,6 +4,7 @@ $secondary-green: #1E3712;
 .app_container {
   height: 100%;
   width: 100%;
+  min-width: 230px;
   display: flex;
   flex-direction: column;
 }
@@ -47,6 +48,9 @@ $secondary-green: #1E3712;
 }
 
 .header__heading--animated {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
   position: absolute;
   top: 0;
   width: 100%;
@@ -80,7 +84,12 @@ $secondary-green: #1E3712;
 }
 
 .header__itinerary {
-
+  color: white;
+  font-size: 10pt; 
+  margin-bottom: 18px;
+  margin-left: 12px;
+  margin-right: 12px;
+  text-align: center;
 }
 /* end region header */
 
