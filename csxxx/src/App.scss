@@ -12,7 +12,7 @@ $secondary-grey: #B7B6BD;
 }
 
 .green--flashing {
-  animation: flashing infinite 2s linear;
+  animation: flashing infinite 1.5s linear;
 }
 
 @keyframes flashing {
@@ -177,15 +177,38 @@ $secondary-grey: #B7B6BD;
 }
 
 .body__ticket-number {
+  color: $primary-grey;
+  align-self: center;
+}
 
+.body__barcode--animated {
+  height: 36pt;
+  width: 80%;
+
+  align-self: center; // barcode alignment
+  text-align: center; // text alignment
+  padding: 20px 0px;
+  color: $primary-green;
+
+  font-weight: 400;
+  font-size: 18pt;
+  animation: fade infinite 1.5s linear; 
+}
+
+@keyframes fade {
+  0% { color: transparent; }
+  50% { color: $primary-green; }
+  100% { color: transparent; }
 }
 
 .body__countdown-container {
-
+  display: flex;
+  flex-direction: row;
 }
 
 .body__countdown-container__current-time {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .body__countdown-container__current-time__heading {
@@ -197,7 +220,8 @@ $secondary-grey: #B7B6BD;
 }
 
 .body__countdown-container__time-since-activation {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .body__countdown-container__time-since-activation__heading {
