@@ -10,7 +10,9 @@ const destination = "University of Waterloo Terminal"
 function App() {
   // when does this update?
   const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
-
+  setInterval(function() {
+    setCurrentTime(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
+  }, 1000);
   return (
     <div className="app_container">
       <div className="header green--flashing">
@@ -57,15 +59,15 @@ function App() {
 
           <div className="body__countdown-container__time-since-activation">
             <span className="body__countdown-container__time-since-activation__heading">TIME SINCE ACTIVATION:</span>
-            <span className="body__countdown-container__time-since-activation__clock">{hourglass() /* this is static fyi */}</span>
+            <span className="body__countdown-container__time-since-activation__clock">00:00:00</span>
           </div>
         </div>
       </div>
 
 
       <div id="footer" className="footer green--flashing">
-        <span className="footer__disclaimer">Please show this to the proper authority on board the train.</span>
-        <span className="footer__hourglass">{hourglass() /* this is static fyi */}</span>
+        <span className="footer__instruction">Please show this to the proper authority on board the train.</span>
+        <span className="footer__hourglass">00:00:00</span>
       </div>
     </div>
   );
@@ -78,8 +80,7 @@ function App() {
  * flag on the counter will use the inverse of the hourglass value 
  * (i.e. hourglass() = 3:59:26 => tsa = 00:00:33)
  */
-function hourglass() {
+// var hourglass = setInterval(function() {
 
-}
-
+// }, 1000);
 export default App;
