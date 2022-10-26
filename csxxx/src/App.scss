@@ -202,26 +202,34 @@ $secondary-grey: #B7B6BD;
 }
 
 .body__countdown-container {
+  color: $primary-grey;
   display: flex;
   flex-direction: row;
+  padding-bottom: 8pt;
 }
 
 .body__countdown-container__current-time {
   display: flex;
+  width: 65%;
   flex-direction: column;
+  align-items: center;
 }
 
 .body__countdown-container__current-time__heading {
-  
+  font-weight: 800;
+  font-size: 7pt;
+  margin-bottom: 1pt;
 }
 
 .body__countdown-container__current-time__clock {
-  
+  font-weight: 700;
+  font-size: 10pt;
 }
 
 .body__countdown-container__time-since-activation {
   display: flex;
   flex-direction: column;
+  width: 35%;
 }
 
 .body__countdown-container__time-since-activation__heading {
