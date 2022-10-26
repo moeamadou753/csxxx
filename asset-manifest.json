@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/csxxx/static/css/main.323e6874.css",
-    "main.js": "/csxxx/static/js/main.c454d127.js",
+    "main.css": "/csxxx/static/css/main.b2ec86d0.css",
+    "main.js": "/csxxx/static/js/main.f95be6de.js",
     "static/js/787.947a28a5.chunk.js": "/csxxx/static/js/787.947a28a5.chunk.js",
     "static/media/transit-logo.png": "/csxxx/static/media/transit-logo.50d8783f8e6ab3ca59e8.png",
     "index.html": "/csxxx/index.html",
-    "main.323e6874.css.map": "/csxxx/static/css/main.323e6874.css.map",
-    "main.c454d127.js.map": "/csxxx/static/js/main.c454d127.js.map",
+    "main.b2ec86d0.css.map": "/csxxx/static/css/main.b2ec86d0.css.map",
+    "main.f95be6de.js.map": "/csxxx/static/js/main.f95be6de.js.map",
     "787.947a28a5.chunk.js.map": "/csxxx/static/js/787.947a28a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.323e6874.css",
-    "static/js/main.c454d127.js"
+    "static/css/main.b2ec86d0.css",
+    "static/js/main.f95be6de.js"
   ]
 }
