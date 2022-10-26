@@ -6,13 +6,17 @@ import { useState } from 'react';
 const ticketNumber = "MZ56120152"
 const from = "Union Station Bus Terminal"
 const destination = "University of Waterloo Terminal"
+const four_hours_as_seconds = 4 * 60 * 60;
 
 function App() {
-  // when does this update?
   const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
+  const [validityTimer, setValidityTimer] = useState(Math.floor(Math.random() * 301));
+
   setInterval(function() {
     setCurrentTime(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
+    setValidityTimer(validityTimer >= four_hours_as_seconds? Math.floor(Math.random() * 301) : validityTimer + 1)
   }, 1000);
+
   return (
     <div className="app_container">
       <div className="header green--flashing">
@@ -59,7 +63,7 @@ function App() {
 
           <div className="body__countdown-container__time-since-activation">
             <span className="body__countdown-container__time-since-activation__heading">TIME SINCE ACTIVATION:</span>
-            <span className="body__countdown-container__time-since-activation__clock">00:00:00</span>
+            <span className="body__countdown-container__time-since-activation__clock">{new Date(validityTimer * 1000).toISOString().slice(11, 19)}</span>
           </div>
         </div>
       </div>
@@ -67,20 +71,10 @@ function App() {
 
       <div id="footer" className="footer green--flashing">
         <span className="footer__instruction">Please show this to the proper authority on board the train.</span>
-        <span className="footer__hourglass">00:00:00</span>
+        <span className="footer__hourglass">{new Date((four_hours_as_seconds - validityTimer) * 1000).toISOString().slice(11, 19)}</span>
       </div>
     </div>
   );
 }
 
-/**
- * Hourglass should count down in HH:MM:SS fmt from 04:00:0 to 00:00:00.
- * 
- * The footer will display the hourglass value, and the time since activation
- * flag on the counter will use the inverse of the hourglass value 
- * (i.e. hourglass() = 3:59:26 => tsa = 00:00:33)
- */
-// var hourglass = setInterval(function() {
-
-// }, 1000);
 export default App;
