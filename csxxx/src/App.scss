@@ -149,6 +149,25 @@ $primary-grey: #454C57;
 
 }
 
+.body__trip-info__trip-type {
+  color: $primary-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 42px;
+}
+
+.body__trip-info__trip-type__arrow {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+}
+
+.body__trip-info__trip-type__copy {
+  font-weight: 700;
+  font-size: 13pt;
+}
+
 .body__horizontal-divider {
 
 }
