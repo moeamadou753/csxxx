@@ -102,6 +102,18 @@ $secondary-green: #1E3712;
   width: 100%;
   border-top: 6px solid $primary-green;
   border-bottom: 6px solid $primary-green;
+  position: relative;
+}
+
+.body__circle {
+  top: -5%;
+  left: 46%;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: $primary-green;
+  border: 3px solid white;
 }
 
 .body__trip-info {

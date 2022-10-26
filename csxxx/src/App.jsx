@@ -30,6 +30,7 @@ function App() {
       </div>
 
       <div className="body">
+        <div className="body__circle"/>
         <div className="body__trip-info">
           <div className="body__trip-info__passenger-info">
             <span className="body__trip-info__passenger-info__num-passengers">x1</span>
