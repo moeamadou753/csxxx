@@ -1,6 +1,7 @@
 $primary-green: #447C2A;
 $secondary-green: #1E3712;
 $primary-grey: #454C57;
+$secondary-grey: #B7B6BD;
 
 .app_container {
   height: 100%;
@@ -169,7 +170,10 @@ $primary-grey: #454C57;
 }
 
 .body__horizontal-divider {
-
+  border-top: 2px $secondary-grey dotted;
+  width: 98%;
+  margin-bottom: 12px;
+  align-self: center;
 }
 
 .body__ticket-number {
