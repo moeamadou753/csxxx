@@ -181,9 +181,18 @@ $secondary-grey: #B7B6BD;
   align-self: center;
 }
 
+.body__barcode__outline {
+  align-self: center;
+  position: absolute;
+  top: 61%;
+  width: 85%;
+  z-index: -1;
+}
+
 .body__barcode--animated {
   height: 36pt;
   width: 80%;
+  position: relative;
 
   align-self: center; // barcode alignment
   text-align: center; // text alignment

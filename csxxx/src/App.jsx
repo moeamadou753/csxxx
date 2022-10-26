@@ -1,6 +1,7 @@
 import * as dayjs from 'dayjs';
 import './App.scss';
 import logo from './transit-logo.png';
+import barcode from './barcode.png';
 import { useState } from 'react';
 
 const ticketNumber = "MZ56120152"
@@ -53,7 +54,7 @@ function App() {
         <div className="body__horizontal-divider" />
 
         <span className="body__ticket-number">Ticket Number: <b>{ticketNumber}</b></span>
-        {/* structure barcode as a box of text which just has a background that is conveniently cut-out to fit the text*/}
+        <img className="body__barcode__outline" src={barcode}/>
         <div className="body__barcode--animated">VALID FOR TRAVEL</div>
         <div className="body__countdown-container">
           <div className="body__countdown-container__current-time">
