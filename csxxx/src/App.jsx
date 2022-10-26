@@ -31,6 +31,11 @@ function App() {
 
       <div className="body">
         <div className="body__trip-info">
+          <div className="body__trip-info__passenger-info">
+            <span className="body__trip-info__passenger-info__num-passengers">x1</span>
+            <span className="body__trip-info__passenger-info__copy">Passenger(s)</span>
+            <span className="body__trip-info__passenger-info__passenger-type">1x Adult</span>
+          </div>
           <div className="body__trip-info__vertical-divider" />
         </div>
 
