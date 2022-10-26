@@ -210,7 +210,7 @@ $secondary-grey: #B7B6BD;
 
 .body__countdown-container__current-time {
   display: flex;
-  width: 65%;
+  width: 60%;
   flex-direction: column;
   align-items: center;
 }
@@ -229,15 +229,18 @@ $secondary-grey: #B7B6BD;
 .body__countdown-container__time-since-activation {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 40%;
 }
 
 .body__countdown-container__time-since-activation__heading {
-
+  font-weight: 800;
+  font-size: 6pt;
+  margin-bottom: 1pt;
 }
 
 .body__countdown-container__time-since-activation__clock {
-
+  font-weight: 700;
+  font-size: 10pt;
 }
 /* end region body */
 
