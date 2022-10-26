@@ -1,5 +1,6 @@
 $primary-green: #447C2A;
 $secondary-green: #1E3712;
+$primary-grey: #454C57;
 
 .app_container {
   height: 100%;
@@ -117,7 +118,31 @@ $secondary-green: #1E3712;
 }
 
 .body__trip-info {
+  color: $primary-grey;
+  display: flex;
+  flex-direction: row;
+}
 
+.body__trip-info__passenger-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.body__trip-info__passenger-info__num-passengers {
+  font-weight: 500;
+  font-size: 24pt;
+}
+
+.body__trip-info__passenger-info__copy {
+  font-weight: 700;
+  font-size: 12pt;
+  margin-bottom: 8pt;
+}
+
+.body__trip-info__passenger-info__passenger-type {
+  font-size: 10pt;
 }
 
 .body__trip-info__vertical-divider {
