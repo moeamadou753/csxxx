@@ -2,6 +2,7 @@ import * as dayjs from 'dayjs';
 import './App.scss';
 import logo from './transit-logo.png';
 import barcode from './barcode.png';
+import arrow from './arrow.png';
 import { useState } from 'react';
 
 const ticketNumber = "MZ56120152"
@@ -46,7 +47,7 @@ function App() {
           </div>
           <img className="body__trip-info__vertical-divider" />
           <div className="body__trip-info__trip-type">
-            <img className="body__trip-info__trip-type__arrow"/>
+            <img className="body__trip-info__trip-type__arrow" src={arrow}/>
             <span className="body__trip-info__trip-type__copy">One-Way</span>
           </div>
         </div>
