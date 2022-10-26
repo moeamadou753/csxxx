@@ -3,6 +3,7 @@ import './App.scss';
 import logo from './transit-logo.png';
 import barcode from './barcode.png';
 import arrow from './arrow.png';
+import divider from './divider.png';
 import { useState } from 'react';
 
 const ticketNumber = "MZ56120152"
@@ -45,7 +46,7 @@ function App() {
             <span className="body__trip-info__passenger-info__copy">Passenger(s)</span>
             <span className="body__trip-info__passenger-info__passenger-type">1x Adult</span>
           </div>
-          <img className="body__trip-info__vertical-divider" />
+          <img className="body__trip-info__vertical-divider" src={divider} />
           <div className="body__trip-info__trip-type">
             <img className="body__trip-info__trip-type__arrow" src={arrow}/>
             <span className="body__trip-info__trip-type__copy">One-Way</span>

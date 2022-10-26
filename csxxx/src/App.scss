@@ -122,6 +122,7 @@ $secondary-grey: #B7B6BD;
   color: $primary-grey;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .body__trip-info__passenger-info {
@@ -147,7 +148,8 @@ $secondary-grey: #B7B6BD;
 }
 
 .body__trip-info__vertical-divider {
-
+  height: 92px;
+  align-self: center;
 }
 
 .body__trip-info__trip-type {
