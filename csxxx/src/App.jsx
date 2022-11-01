@@ -11,14 +11,15 @@ const from = "Union Station Bus Terminal"
 const destination = "University of Waterloo Terminal"
 const four_hours_as_seconds = 4 * 60 * 60;
 const one_hour_as_seconds = 60 * 60;
+const seed = Math.floor(Math.random() * one_hour_as_seconds);
 
 function App() {
   const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
-  const [validityTimer, setValidityTimer] = useState(Math.floor(Math.random() * one_hour_as_seconds));
+  const [validityTimer, setValidityTimer] = useState(seed);
 
   setInterval(function() {
     setCurrentTime(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
-    setValidityTimer(validityTimer >= four_hours_as_seconds? Math.floor(Math.random() * one_hour_as_seconds) : validityTimer + 1)
+    setValidityTimer(validityTimer >= four_hours_as_seconds? seed : validityTimer + 1)
   }, 1000);
 
   return (
@@ -69,7 +70,7 @@ function App() {
 
           <div className="body__countdown-container__time-since-activation">
             <span className="body__countdown-container__time-since-activation__heading">TIME SINCE ACTIVATION:</span>
-            <span className="body__countdown-container__time-since-activation__clock">{new Date(validityTimer * 1000).toISOString().slice(11, 19)}</span>
+            <span className="body__countdown-container__time-since-activation__clock">{formatTime(validityTimer)}</span>
           </div>
         </div>
       </div>
@@ -77,10 +78,23 @@ function App() {
 
       <div id="footer" className="footer green--flashing">
         <span className="footer__instruction">Please show this to the proper authority on board the train.</span>
-        <span className="footer__hourglass">{new Date((four_hours_as_seconds - validityTimer) * 1000).toISOString().slice(11, 19)}</span>
+        <span className="footer__hourglass">{formatTime(four_hours_as_seconds - validityTimer)}</span>
       </div>
     </div>
   );
+}
+
+function padDigits(num) {
+  if ((num / 10) >= 1) return num.toString();
+  else return `0${num.toString()}`;
+}
+
+function formatTime(rawSeconds) {
+  let hours = Math.floor(rawSeconds / 3600);
+  let minutes = Math.floor((rawSeconds - hours * 3600) / 60);
+  let seconds = rawSeconds - hours * 3600 - minutes * 60;
+
+  return `${padDigits(hours)}:${padDigits(minutes)}:${padDigits(seconds)}`
 }
 
 export default App;
