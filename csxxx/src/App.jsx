@@ -24,7 +24,6 @@ class App extends React.Component {
 
   componentDidMount() {
     this.timerID = setInterval(() => {
-      console.log('interval hit');
       this.setState({
         currentTime: dayjs().format('MMM DD YYYY, hh:mm:ss A'),
         validityTimer: this.state.validityTimer >= four_hours_as_seconds? seed : this.state.validityTimer + 1,
