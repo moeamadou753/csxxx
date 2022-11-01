@@ -201,9 +201,10 @@ $secondary-grey: #B7B6BD;
 }
 
 .body__barcode--animated {
-  height: 36pt;
+  height: 100%;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
 
   text-align: center; // text alignment
   padding: 6px 0px;
