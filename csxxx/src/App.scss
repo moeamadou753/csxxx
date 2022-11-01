@@ -58,6 +58,7 @@ $secondary-grey: #B7B6BD;
   width: 100%;
   text-align: center;
   animation: scrolling-text infinite 8s linear;
+  animation-fill-mode: both;
 }
 
 .header__heading--animated2 {
