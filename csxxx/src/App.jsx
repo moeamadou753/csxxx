@@ -10,14 +10,15 @@ const ticketNumber = "MZ56120152"
 const from = "Union Station Bus Terminal"
 const destination = "University of Waterloo Terminal"
 const four_hours_as_seconds = 4 * 60 * 60;
+const one_hour_as_seconds = 60 * 60;
 
 function App() {
   const [currentTime, setCurrentTime] = useState(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
-  const [validityTimer, setValidityTimer] = useState(Math.floor(Math.random() * 301));
+  const [validityTimer, setValidityTimer] = useState(Math.floor(Math.random() * one_hour_as_seconds));
 
   setInterval(function() {
     setCurrentTime(dayjs().format('MMM DD YYYY, hh:mm:ss A'))
-    setValidityTimer(validityTimer >= four_hours_as_seconds? Math.floor(Math.random() * 301) : validityTimer + 1)
+    setValidityTimer(validityTimer >= four_hours_as_seconds? Math.floor(Math.random() * one_hour_as_seconds) : validityTimer + 1)
   }, 1000);
 
   return (
@@ -56,8 +57,10 @@ function App() {
         <div className="body__horizontal-divider" />
 
         <span className="body__ticket-number">Ticket Number: <b>{ticketNumber}</b></span>
-        <img className="body__barcode__outline" src={barcode}/>
-        <div className="body__barcode--animated">VALID FOR TRAVEL</div>
+        <div className="body__barcode">
+        < img className="body__barcode__outline" src={barcode}/>
+          <div className="body__barcode--animated">VALID FOR TRAVEL</div>
+        </div>
         <div className="body__countdown-container">
           <div className="body__countdown-container__current-time">
             <span className="body__countdown-container__current-time__heading">CURRENT TIME:</span>

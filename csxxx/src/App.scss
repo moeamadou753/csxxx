@@ -183,22 +183,30 @@ $secondary-grey: #B7B6BD;
   align-self: center;
 }
 
+.body__barcode {
+  width: 80%;
+  height: 15%;
+  position: relative;
+  align-self: center;
+  margin: 10px 0px;
+}
+
+
 .body__barcode__outline {
+  width: 100%;
+  height: 100%;
   align-self: center;
   position: absolute;
-  top: 62%;
-  width: 316px;
   z-index: -1;
 }
 
 .body__barcode--animated {
   height: 36pt;
-  width: 80%;
+  width: 100%;
   position: relative;
 
-  align-self: center; // barcode alignment
   text-align: center; // text alignment
-  padding: 20px 0px;
+  padding: 6px 0px;
   color: $primary-green;
 
   font-weight: 400;
