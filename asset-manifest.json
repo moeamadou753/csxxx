@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/csxxx/static/css/main.948020d4.css",
-    "main.js": "/csxxx/static/js/main.7a42a289.js",
+    "main.css": "/csxxx/static/css/main.e2a9e69c.css",
+    "main.js": "/csxxx/static/js/main.395b9798.js",
     "static/js/787.947a28a5.chunk.js": "/csxxx/static/js/787.947a28a5.chunk.js",
     "static/media/transit-logo.png": "/csxxx/static/media/transit-logo.50d8783f8e6ab3ca59e8.png",
     "static/media/divider.png": "/csxxx/static/media/divider.2600bdfd5539185a7720.png",
     "index.html": "/csxxx/index.html",
-    "main.948020d4.css.map": "/csxxx/static/css/main.948020d4.css.map",
-    "main.7a42a289.js.map": "/csxxx/static/js/main.7a42a289.js.map",
+    "main.e2a9e69c.css.map": "/csxxx/static/css/main.e2a9e69c.css.map",
+    "main.395b9798.js.map": "/csxxx/static/js/main.395b9798.js.map",
     "787.947a28a5.chunk.js.map": "/csxxx/static/js/787.947a28a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.948020d4.css",
-    "static/js/main.7a42a289.js"
+    "static/css/main.e2a9e69c.css",
+    "static/js/main.395b9798.js"
   ]
 }
