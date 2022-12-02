@@ -11,7 +11,7 @@ const from = "Union Station Bus Terminal"
 const destination = "University of Waterloo Terminal"
 const four_hours_as_seconds = 4 * 60 * 60;
 const one_hour_as_seconds = 60 * 60;
-const seed = Math.floor(Math.random() * one_hour_as_seconds);
+const seed = Math.floor(Math.random() * one_hour_as_seconds) + one_hour_as_seconds;
 let browserStyle;
 
 class App extends React.Component {
