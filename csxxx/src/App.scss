@@ -4,11 +4,24 @@ $primary-grey: #454C57;
 $secondary-grey: #B7B6BD;
 
 .app_container {
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
   min-width: 390px;
   display: flex;
   flex-direction: column;
+}
+
+.chrome-top {
+  padding-top: 50px;
+}
+
+.chrome-bottom {
+  padding-bottom: 50px;
+}
+
+.safari-bottom {
+  padding-bottom: 50px;
 }
 
 .green--flashing {
@@ -105,6 +118,7 @@ $secondary-grey: #B7B6BD;
   width: 100%;
   border-top: 6px solid $primary-green;
   border-bottom: 6px solid $primary-green;
+  padding-bottom: 6px;
   position: relative;
 }
 
@@ -282,7 +296,7 @@ $secondary-grey: #B7B6BD;
   font-size: 10.5pt;
   width: 80%;
   text-align: center;
-  margin-top: auto;
+  margin-top: 60px;
 }
 
 .footer__hourglass {

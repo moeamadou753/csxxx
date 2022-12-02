@@ -12,9 +12,20 @@ const destination = "University of Waterloo Terminal"
 const four_hours_as_seconds = 4 * 60 * 60;
 const one_hour_as_seconds = 60 * 60;
 const seed = Math.floor(Math.random() * one_hour_as_seconds);
+let browserStyle;
 
 class App extends React.Component {
   constructor(props) {
+    let userAgent = navigator.userAgent.toLowerCase();
+    
+    /* browser specific styling */
+    if (userAgent.includes('chrome')) {
+      browserStyle = 'chrome';
+    } else if (userAgent.includes('safari')) {
+      browserStyle = 'safari';
+    }
+    /* end browser specific styling */
+
     super(props);
     this.state = {
       currentTime: dayjs().format('MMM DD YYYY, hh:mm:ss A'),
@@ -38,6 +49,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app_container">
+        <div className={`${browserStyle}-top green--flashing`} />
         <div className="header green--flashing">
           <img className="header__gt-icon" src={logo}/>
           <div className="header__heading__scroll-container">
@@ -94,6 +106,7 @@ class App extends React.Component {
           <span className="footer__instruction">Please show this to the proper authority on board the train.</span>
           <span className="footer__hourglass">{formatTime(four_hours_as_seconds - this.state.validityTimer)}</span>
         </div>
+        <div className={`${browserStyle}-bottom green--flashing`} />
       </div>
     );
   } 
