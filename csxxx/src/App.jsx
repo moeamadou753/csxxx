@@ -17,6 +17,7 @@ let browserStyle;
 class App extends React.Component {
   constructor(props) {
     let userAgent = navigator.userAgent.toLowerCase();
+    // sample commit
     
     /* browser specific styling */
     if (userAgent.includes('chrome')) {
