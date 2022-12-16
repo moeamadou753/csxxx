@@ -7,8 +7,8 @@ import divider from './divider.png';
 import React from 'react';
 
 const ticketNumber = "MZ56120152"
-const from = "Union Station Bus Terminal"
-const destination = "University of Waterloo Terminal"
+const from = "University of Waterloo Terminal"
+const destination = "Union Station Bus Terminal"
 const four_hours_as_seconds = 4 * 60 * 60;
 const one_hour_as_seconds = 60 * 60;
 const seed = Math.floor(Math.random() * one_hour_as_seconds) + one_hour_as_seconds;
