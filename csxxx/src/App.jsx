@@ -14,6 +14,9 @@ const one_hour_as_seconds = 60 * 60;
 const seed = Math.floor(Math.random() * one_hour_as_seconds) + one_hour_as_seconds;
 let browserStyle;
 
+/* TODO: add preliminary screen where you can pick src/dest and also round-trip / one-wau
+*/
+
 class App extends React.Component {
   constructor(props) {
     let userAgent = navigator.userAgent.toLowerCase();
