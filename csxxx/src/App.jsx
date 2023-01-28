@@ -7,20 +7,14 @@ import divider from './divider.png';
 import React from 'react';
 
 const ticketNumber = "MZ56120152"
-const destination = "University of Waterloo Terminal"
-const from = "Union Station Bus Terminal"
 const four_hours_as_seconds = 4 * 60 * 60;
 const one_hour_as_seconds = 60 * 60;
 const seed = Math.floor(Math.random() * one_hour_as_seconds) + one_hour_as_seconds;
 let browserStyle;
 
-/* TODO: add preliminary screen where you can pick src/dest and also round-trip / one-way
-*/
-
 class App extends React.Component {
   constructor(props) {
     let userAgent = navigator.userAgent.toLowerCase();
-    // sample commit
     
     /* browser specific styling */
     if (userAgent.includes('chrome')) {
@@ -66,7 +60,7 @@ class App extends React.Component {
               <div className="header__heading--animated4">·</div>
           </div>
           <div className="header__itinerary">
-            <span>{from}</span> to <span>{destination}</span>
+            <span>{this.props.from}</span> to <span>{this.props.destination}</span>
           </div>
         </div>
 

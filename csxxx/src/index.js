@@ -3,12 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { useSearchParams } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function AppService() {
+  let [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.toString());
+  let from = searchParams.get("from")
+  let destination = searchParams.get("destination")
+
+  return <App from={from || "Union Station Bus Terminal"}
+              destination={destination || "University of Waterloo Terminal"}/>;
+}
+
 root.render(
   <React.StrictMode>
-    {/* todo: add potentially cached pre-app screen */}
-    <App />
+    <BrowserRouter>
+      <AppService />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
