@@ -7,14 +7,14 @@ import divider from './divider.png';
 import React from 'react';
 
 const ticketNumber = "MZ56120152"
-const from = "University of Waterloo Terminal"
-const destination = "Union Station Bus Terminal"
+const destination = "University of Waterloo Terminal"
+const from = "Union Station Bus Terminal"
 const four_hours_as_seconds = 4 * 60 * 60;
 const one_hour_as_seconds = 60 * 60;
 const seed = Math.floor(Math.random() * one_hour_as_seconds) + one_hour_as_seconds;
 let browserStyle;
 
-/* TODO: add preliminary screen where you can pick src/dest and also round-trip / one-wau
+/* TODO: add preliminary screen where you can pick src/dest and also round-trip / one-way
 */
 
 class App extends React.Component {
